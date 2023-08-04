@@ -1,0 +1,312 @@
+@import "../../mixins.scss";
+.destination-container {
+	background-image: url("../../assets/destination/background-destination-desktop.jpg");
+	background-size: cover;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	overflow: hidden;
+	@include mobile {
+		overflow-y: scroll;
+		background-image: url("../../assets/destination/background-destination-mobile.jpg");
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@include medium-screen {
+		background-image: url("../../assets/destination/background-destination-desktop.jpg");
+		background-size: cover;
+	}
+	.pick-destination {
+		position: absolute;
+		font-family: "Barlow Condensed";
+		font-size: 1.75rem;
+		letter-spacing: 4.72px;
+		color: white;
+		span {
+			font-weight: bold;
+			opacity: 25%;
+		}
+		@include mobile {
+			font-size: 1rem;
+			letter-spacing: 2.72px;
+			top: 8rem;
+			left: auto;
+		}
+		@include tablet {
+			font-size: 1.25rem;
+			letter-spacing: 3.72px;
+			left: 3.125rem;
+		}
+		@include medium-screen {
+			font-size: 1.375rem;
+			letter-spacing: 4.72px;
+			top: 9.375rem;
+			left: 6.25rem;
+		}
+		@include large-screen {
+			top: 10.625rem;
+			left: 10.375rem;
+			font-size: 1.75rem;
+		}
+	}
+	.destination-content {
+		color: white;
+		position: relative;
+		top: 12.5rem;
+		display: flex;
+		flex-direction: row;
+		height: 31.25rem;
+		width: 78.125rem;
+		margin: 0 auto;
+		justify-content: space-between;
+		align-items: center;
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			max-width: 23.4375rem;
+		}
+		@include tablet {
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			max-width: 35.8125rem;
+		}
+		@include medium-screen {
+			flex-direction: row;
+			align-items: center;
+			position: relative;
+			top: 15.625rem;
+			height: 18.75rem;
+			max-width: 64rem;
+		}
+		@include large-screen {
+			height: 31.25rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			position: relative;
+			top: 12.5rem;
+			max-width: 78.125rem;
+		}
+		.left-portion {
+			@include medium-screen {
+				width: 65%;
+				justify-content: space-around;
+				margin-top: 2rem;
+				margin-left: 5.625rem;
+			}
+			@include large-screen {
+				width: 45%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 2rem;
+			}
+			img {
+				@include mobile {
+					width: 18.75rem;
+				}
+				@include medium-screen {
+					width: 21.875rem;
+				}
+				@include large-screen {
+					width: 25rem;
+				}
+			}
+		}
+		.right-portion {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-bottom: 5rem;
+			@include mobile {
+				text-align: center;
+				align-items: center;
+				width: 100%;
+				max-width: 20.4375rem;
+			}
+			@include tablet {
+				text-align: center;
+				align-items: center;
+				width: 100%;
+				max-width: 35.8125rem;
+			}
+			@include medium-screen {
+				max-width: 27.8125rem;
+				text-align: start;
+				align-items: flex-start;
+				padding-bottom: 1rem;
+			}
+			.dest-nav {
+				display: flex;
+				align-items: center;
+				height: 2.1rem;
+				@include mobile {
+					margin-top: 1.5625rem;
+					height: 1.75rem;
+				}
+				@include tablet {
+					height: 2.125rem;
+				}
+				.dest-list {
+					display: flex;
+					list-style-type: none;
+					li {
+						text-decoration: none;
+						margin: 2px 10px;
+						position: relative;
+						font-family: "Barlow Condensed", sans-serif;
+						font-size: 1rem;
+						letter-spacing: 2px;
+						display: flex;
+						flex-direction: column;
+						text-transform: uppercase;
+						font-weight: lighter;
+						color: white;
+						cursor: pointer;
+						@include mobile {
+							font-size: 14px;
+						}
+						@include tablet {
+							letter-spacing: 3px;
+						}
+						@include medium-screen {
+							letter-spacing: 2.7px;
+							font-size: 1rem;
+						}
+						&::after {
+							content: "";
+							position: absolute;
+							bottom: -0.5rem;
+							border-bottom: 2px solid white;
+							transform: scaleX(0);
+							transform-origin: left;
+							transition: all 0.4s ease-in-out;
+						}
+						&:hover::after {
+							width: 100%;
+							background-color: #fff;
+							transform: scaleX(1);
+						}
+					}
+				}
+			}
+			h1 {
+				font-family: "Bellefair", sans-serif;
+				font-size: 6.25rem;
+				font-weight: normal;
+				text-transform: uppercase;
+				@include mobile {
+					font-size: 3.5rem;
+					margin-top: 1rem;
+				}
+				@include tablet {
+					font-size: 5rem;
+					margin-top: 1rem;
+				}
+				@include medium-screen {
+					font-size: 5.625rem;
+					margin-top: 1rem;
+				}
+				@include large-screen {
+					margin-top: 2.5rem;
+				}
+			}
+			p {
+				font-family: "Barlow", sans-serif;
+				font-size: 18px;
+				font-weight: lighter;
+				line-height: 32px;
+				@include mobile {
+					font-size: 15px;
+					line-height: 1.5625rem;
+				}
+				@include tablet {
+					font-size: 1rem;
+					line-height: 1.75rem;
+					max-width: 35.8125rem;
+				}
+				@include medium-screen {
+					font-size: 18px;
+					max-width: 25rem;
+				}
+				@include large-screen {
+					max-width: 27.8125rem;
+				}
+			}
+			hr {
+				height: 0.06rem;
+				opacity: 0.24;
+				border: 0px solid #383b4b;
+				background: white;
+				margin-top: 2.5rem;
+				max-width: 27.8125rem;
+				@include mobile {
+					border: 0px solid #383b4b;
+					background: white;
+					height: 1px;
+					width: 20.4375rem;
+				}
+				@include tablet {
+					border: 0px solid #383b4b;
+					background: white;
+					height: 1px;
+					width: 35.8125rem;
+				}
+				@include medium-screen {
+					max-width: 25rem;
+				}
+				@include large-screen {
+					max-width: 27.8125rem;
+				}
+			}
+			.distance-time {
+				display: flex;
+				text-transform: uppercase;
+				@include mobile {
+					flex-direction: column;
+					margin-top: 1.875rem;
+					gap: 1.875rem;
+				}
+				@include tablet {
+					flex-direction: row;
+					margin-top: 1.875rem;
+					gap: 6rem;
+				}
+				@include large-screen {
+					margin-top: 1.5rem;
+				}
+				.distance,
+				.time {
+					p {
+						font-family: "Barlow Condensed", sans-serif;
+						font-size: 14px;
+						font-weight: normal;
+						letter-spacing: 2.36px;
+						color: #d0d6f9;
+					}
+					h3 {
+						font-family: "Bellefair", sans-serif;
+						font-size: 1.75rem;
+						font-weight: normal;
+						@include mobile {
+							margin-top: 5px;
+						}
+						@include medium-screen {
+							font-size: 1.375rem;
+						}
+						@include large-screen {
+							font-size: 1.75rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

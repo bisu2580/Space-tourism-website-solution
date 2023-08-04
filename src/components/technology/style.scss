@@ -1,0 +1,286 @@
+@import "../../mixins.scss";
+.tech-container {
+	width: 100vw;
+	height: 100vh;
+	background: url("../../assets/technology/background-technology-desktop.jpg");
+	background-size: cover;
+	overflow: hidden;
+	@include mobile {
+		background: url("../../assets/technology/background-technology-mobile.jpg");
+		background-size: cover;
+		overflow-y: scroll;
+	}
+	@include medium-screen {
+		background: url("../../assets/technology/background-technology-desktop.jpg");
+		background-size: cover;
+		overflow: hidden;
+	}
+	.space-launch {
+		position: relative;
+		top: 11rem;
+		left: 10.37rem;
+		font-family: "Barlow Condensed";
+		font-size: 1.75rem;
+		letter-spacing: 4.72px;
+		color: white;
+		span {
+			font-weight: bold;
+			opacity: 25%;
+		}
+		@include mobile {
+			position: relative;
+			font-size: 1rem;
+			letter-spacing: 2.78px;
+			text-align: center;
+			margin-left: auto;
+			top: 8.125rem;
+			left: 0;
+		}
+		@include tablet {
+			font-size: 1.25rem;
+			letter-spacing: 3.38px;
+			text-align: left;
+			left: 2.5rem;
+		}
+		@include medium-screen {
+			font-size: 1.5625rem;
+			top: 9.37rem;
+			left: 8.125rem;
+		}
+		@include large-screen {
+			font-size: 1.75rem;
+			letter-spacing: 4.72px;
+		}
+	}
+	.tech-content {
+		position: relative;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease-in-out;
+		@include mobile {
+			flex-direction: column-reverse;
+			max-width: 23.4375rem;
+			text-align: center;
+			top: 9.37rem;
+			margin: 0 auto;
+		}
+		@include tablet {
+			max-width: 48rem;
+			width: 100%;
+			top: 11.25rem;
+		}
+		@include medium-screen {
+			flex-direction: row;
+			top: 0;
+			margin-top: 11.25rem;
+			left: 8.125rem;
+			max-width: 1200px;
+		}
+		@include large-screen {
+			margin-top: 11.25rem;
+			justify-content: space-between;
+		}
+		.left {
+			display: flex;
+			width: 60%;
+			gap: 10%;
+			align-items: center;
+			transition: all 0.3s ease-in-out;
+			@include mobile {
+				flex-direction: column-reverse;
+				max-width: 20.43rem;
+				width: 100%;
+			}
+			@include tablet {
+				max-width: 28.62rem;
+				width: 100%;
+			}
+			@include medium-screen {
+				max-width: 600px;
+			}
+			@include large-screen {
+				max-width: 700px;
+			}
+			.slider-tech {
+				display: flex;
+				flex-direction: column;
+				gap: 1.375rem;
+				@include mobile {
+					flex-direction: row;
+					order: 2;
+					margin-top: 2.125rem;
+				}
+				.slider-bubble {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: black;
+					border: 1px solid;
+					font-family: "Bellefair", sans-serif;
+					font-size: 2rem;
+					width: 5rem;
+					height: 5rem;
+					border-radius: 50%;
+					background-color: white;
+					transition: all 0.3s ease-in-out;
+					@include mobile {
+						width: 2.5rem;
+						height: 2.5rem;
+						font-size: 1.125rem;
+					}
+					@include tablet {
+						width: 3.75rem;
+						height: 3.75rem;
+						font-size: 1.5rem;
+					}
+					@include medium-screen {
+						width: 4.375rem;
+						height: 4.375rem;
+						font-size: 1.75rem;
+					}
+					@include large-screen {
+						width: 5rem;
+						height: 5rem;
+						font-size: 2rem;
+					}
+				}
+				.inactive {
+					background-color: transparent;
+					color: white;
+					border-color: #d0d6f9;
+					opacity: 50%;
+					&:hover {
+						color: black;
+						background-color: rgb(204, 204, 204);
+					}
+				}
+			}
+			.tech-text {
+				max-width: 44.375rem;
+				display: flex;
+				flex-direction: column;
+				max-height: 18.93rem;
+				transition: all 0.3s ease-in-out;
+				@include mobile {
+					max-width: 20.43rem;
+					margin-top: 1.5625rem;
+				}
+				@include tablet {
+					max-width: 28.62rem;
+					margin-top: 1.5625rem;
+				}
+				@include medium-screen {
+					max-width: 43.75rem;
+				}
+				@include large-screen {
+					max-width: 44.375rem;
+				}
+				h3 {
+					font-family: "Barlow Condensed", sans-serif;
+					font-size: 1rem;
+					font-weight: lighter;
+					letter-spacing: 2.7px;
+					color: #d0d6f9;
+					text-transform: uppercase;
+					@include mobile {
+						font-size: 14px;
+						letter-spacing: 2.36px;
+						order: 3;
+					}
+					@include tablet {
+						font-size: 1rem;
+						letter-spacing: 2.7px;
+					}
+				}
+				h2 {
+					font-family: "Bellefair", sans-serif;
+					font-size: 3.5rem;
+					font-weight: normal;
+					margin-top: 10px;
+					text-transform: uppercase;
+					@include mobile {
+						font-size: 1.5rem;
+						order: 4;
+					}
+					@include tablet {
+						font-size: 2.5rem;
+					}
+					@include medium-screen {
+						font-size: 3.125rem;
+					}
+					@include large-screen {
+						font-size: 3.5rem;
+					}
+				}
+				p {
+					font-family: "Barlow", sans-serif;
+					font-size: 1.125rem;
+					font-weight: lighter;
+					line-height: 2rem;
+					margin-top: 1.25rem;
+					color: #d0d6f9;
+					@include mobile {
+						font-size: 15px;
+						line-height: 1.5625rem;
+						order: 5;
+					}
+					@include tablet {
+						font-size: 1rem;
+						line-height: 1.75rem;
+					}
+					@include medium-screen {
+						font-size: 1.06rem;
+						line-height: 1.875rem;
+					}
+					@include large-screen {
+						font-size: 1.125rem;
+						line-height: 2rem;
+					}
+				}
+			}
+		}
+		.hidden {
+			display: none;
+		}
+		.right {
+			position: relative;
+			width: 15%;
+			margin-right: -1.875rem;
+			transition: all 0.3s ease-in-out;
+			@include mobile {
+				order: 1;
+				width: 23.4375rem;
+				transition: unset;
+			}
+			@include tablet {
+				transition: unset;
+				width: 48rem;
+			}
+			@include large-screen {
+				width: 35%;
+				left: 8.125rem;
+			}
+			img {
+				@include mobile {
+					object-fit: cover;
+					height: 13.25rem;
+					width: 100%;
+				}
+				@include tablet {
+					height: 310px;
+					width: 100%;
+				}
+				@include medium-screen {
+					height: 26.6rem;
+					width: 26rem;
+				}
+				@include large-screen {
+					height: 30rem;
+					width: 27.8rem;
+				}
+			}
+		}
+	}
+}
