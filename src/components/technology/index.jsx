@@ -1,9 +1,8 @@
-import { useState } from "react"
+import { Fragment, useState } from "react"
 import "./style.scss"
-import data from "../../data.json"
+import { technology } from "../../tech-data"
 const Tech = () => {
 	const [active, setActive] = useState(0)
-	const { technology } = data
 	return (
 		<div className='tech-container'>
 			<div className='space-launch'>
@@ -12,7 +11,7 @@ const Tech = () => {
 			<div className='tech-content'>
 				{technology?.map((item, idx) => {
 					return (
-						<>
+						<Fragment key={idx}>
 							<div className={active === idx ? "left" : "left hidden"}>
 								<div className='slider-tech'>
 									{technology.map((_, idx) => {
@@ -42,7 +41,7 @@ const Tech = () => {
 							<div className={active === idx ? "right" : "right hidden"}>
 								<img src={item.images.portrait} alt='' />
 							</div>
-						</>
+						</Fragment>
 					)
 				})}
 			</div>

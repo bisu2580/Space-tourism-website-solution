@@ -1,9 +1,8 @@
-import { useState } from "react"
+import { Fragment, useState } from "react"
 import "./style.scss"
-import data from "../../data.json"
+import { crew } from "../../crew-data"
 const Crew = () => {
 	const [active, setActive] = useState(0)
-	const { crew } = data
 	return (
 		<div className='crew-container'>
 			<div className='meet-crew'>
@@ -12,10 +11,9 @@ const Crew = () => {
 			<div className='crew-content'>
 				{crew?.map((item, idx) => {
 					return (
-						<>
+						<Fragment key={idx}>
 							<div
 								className={active === idx ? "crew-left" : "crew-left hidden"}
-								key={idx}
 							>
 								<h4>{item.role}</h4>
 								<h2>{item.name}</h2>
@@ -36,10 +34,10 @@ const Crew = () => {
 								className={active === idx ? "crew-right" : "crew-right hidden"}
 							>
 								<div className='image'>
-									<img src={item.images.png} alt='' />
+									<img src={item.images} alt='' />
 								</div>
 							</div>
-						</>
+						</Fragment>
 					)
 				})}
 			</div>

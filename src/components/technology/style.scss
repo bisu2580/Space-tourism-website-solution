@@ -2,16 +2,16 @@
 .tech-container {
 	width: 100vw;
 	height: 100vh;
-	background: url("../../assets/technology/background-technology-desktop.jpg");
+	background: url("../../images/technology-images/background-technology-desktop.jpg");
 	background-size: cover;
 	overflow: hidden;
 	@include mobile {
-		background: url("../../assets/technology/background-technology-mobile.jpg");
+		background: url("../../images/technology-images/background-technology-mobile.jpg");
 		background-size: cover;
 		overflow-y: scroll;
 	}
 	@include medium-screen {
-		background: url("../../assets/technology/background-technology-desktop.jpg");
+		background: url("../../images/technology-images/background-technology-desktop.jpg");
 		background-size: cover;
 		overflow: hidden;
 	}
@@ -253,6 +253,7 @@
 				order: 1;
 				width: 23.4375rem;
 				transition: unset;
+				margin-right: 0;
 			}
 			@include tablet {
 				transition: unset;
@@ -261,6 +262,7 @@
 			@include large-screen {
 				width: 35%;
 				left: 8.125rem;
+				margin-right: -1.875rem;
 			}
 			img {
 				@include mobile {

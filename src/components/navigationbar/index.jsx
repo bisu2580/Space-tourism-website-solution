@@ -1,6 +1,6 @@
 import "./style.scss"
 import { NavLink } from "react-router-dom"
-import logo from "../../assets/shared/logo.svg"
+import logo from "../../images/shared/logo.svg"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { AiOutlineClose } from "react-icons/ai"
 import { useState } from "react"

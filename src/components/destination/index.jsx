@@ -1,12 +1,10 @@
 import "./style.scss"
-import data from "../../data.json"
+import { destinations } from "../../destination-data"
 import { Fragment, useState } from "react"
 import { useEffect } from "react"
 const Destination = () => {
 	const [name, setName] = useState("Moon")
 	const [component, setComponent] = useState([])
-	const { destinations } = data
-
 	useEffect(() => {
 		setComponent(destinations.filter((namefilter) => namefilter.name === name))
 	}, [name])
@@ -17,10 +15,10 @@ const Destination = () => {
 				<span>01</span> PICK YOUR DESTINATION
 			</div>
 			<div className='destination-content'>
-				{component.map((destinations, idx) => (
+				{component.map((item, idx) => (
 					<Fragment key={idx}>
 						<div className='left-portion'>
-							<img src={destinations.images.png} alt='image' />
+							<img src={item.images} alt='not found' />
 						</div>
 						<div className='right-portion'>
 							<nav className='dest-nav'>
@@ -29,17 +27,17 @@ const Destination = () => {
 								<Navigationbar navName='Europa' handleSetName={setName} />
 								<Navigationbar navName='Titan' handleSetName={setName} />
 							</nav>
-							<h1>{destinations.name}</h1>
-							<p>{destinations.description}</p>
+							<h1>{item.name}</h1>
+							<p>{item.description}</p>
 							<hr />
 							<div className='distance-time'>
 								<div className='distance'>
 									<p>AVG.DISTANCE</p>
-									<h3>{destinations.distance}</h3>
+									<h3>{item.distance}</h3>
 								</div>
 								<div className='time'>
 									<p>EST.TRAVEL TIME</p>
-									<h3>{destinations.travel}</h3>
+									<h3>{item.travel}</h3>
 								</div>
 							</div>
 						</div>
@@ -57,5 +55,4 @@ const Navigationbar = ({ navName, handleSetName }) => {
 		</ul>
 	)
 }
-
 export default Destination

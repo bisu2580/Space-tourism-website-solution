@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400&display=swap");
 @import "../../mixins.scss";
 .container {
-	background-image: url("../../assets/home/desktop.jpg");
+	background-image: url("../../images/home-images/desktop.jpg");
 	background-size: cover;
 	overflow: hidden;
 	position: relative;
@@ -11,15 +11,15 @@
 	height: 100vh;
 	z-index: 10;
 	@include mobile {
-		background-image: url("../../assets/home/background-home-mobile.jpg");
+		background-image: url("../../images/home-images/background-home-mobile.jpg");
 		background-repeat: no-repeat;
 	}
 	@include tablet {
-		background-image: url("../../assets/home/background-home-mobile.jpg");
+		background-image: url("../../images/home-images/background-home-mobile.jpg");
 		background-repeat: no-repeat;
 	}
 	@include medium-screen {
-		background-image: url("../../assets/home/desktop.jpg");
+		background-image: url("../../images/home-images/desktop.jpg");
 		background-size: cover;
 	}
 	.main-content {
