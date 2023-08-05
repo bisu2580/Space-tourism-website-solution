@@ -24,7 +24,7 @@ const NavBar = () => {
 					{icon}
 				</div>
 				<nav className={`main-nav ${isOpen ? "active" : ""}`}>
-					<ul className='nav-list'>
+					<ul className='nav-list' onClick={toggleNavBar}>
 						<li className='nav-text'>
 							<div className='text-grp'>
 								<NavLink to={"/"}>

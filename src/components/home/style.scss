@@ -57,7 +57,7 @@
 				max-height: 17.25rem;
 				position: relative;
 				gap: 1.25rem;
-				top: 5.75rem;
+				top: 4.75rem;
 				left: 0px;
 			}
 			@include tablet {
@@ -117,20 +117,19 @@
 			}
 		}
 		.right-floating-circle {
-			@include tablet {
-				width: 15.125rem !important;
-				height: 15.125rem !important;
-				position: relative;
-				right: 0;
-				top: 4.375rem;
-			}
 			@include mobile {
 				width: 9.375rem;
 				height: 9.375rem;
 				position: relative;
-				top: 3.125rem;
-				left: 1rem;
+				top: 2.125rem;
+				right: 0;
 				bottom: 1.25rem;
+			}
+			@include tablet {
+				width: 15.125rem !important;
+				height: 15.125rem !important;
+				position: relative;
+				top: 4.375rem;
 			}
 			@include medium-screen {
 				width: 17.125rem !important;

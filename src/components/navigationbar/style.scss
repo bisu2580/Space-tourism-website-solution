@@ -176,11 +176,6 @@
 							letter-spacing: 2px;
 							margin: 4px 50px;
 						}
-						.number {
-							@include tablet {
-								display: none;
-							}
-						}
 						a {
 							color: white;
 							text-decoration: none;
