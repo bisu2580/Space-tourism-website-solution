@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react"
 import "./style.scss"
+import Image from "../LazyLoadImage"
 import { technology } from "../../tech-data"
 const Tech = () => {
 	const [active, setActive] = useState(0)
@@ -39,7 +40,7 @@ const Tech = () => {
 								</div>
 							</div>
 							<div className={active === idx ? "right" : "right hidden"}>
-								<img src={item.images.portrait} alt='' />
+								<Image src={item.images.portrait} className='image-tech' />
 							</div>
 						</Fragment>
 					)

@@ -25,7 +25,9 @@
 		background-color: transparent;
 		color: white;
 		z-index: 1;
-		margin-left: 3.43rem;
+		@include mobile {
+			margin-left: 2rem;
+		}
 		@include medium-screen {
 			margin-left: 1.56rem;
 		}

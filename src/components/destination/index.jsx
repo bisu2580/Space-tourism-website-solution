@@ -2,6 +2,7 @@ import "./style.scss"
 import { destinations } from "../../destination-data"
 import { Fragment, useState } from "react"
 import { useEffect } from "react"
+import Image from "../LazyLoadImage"
 const Destination = () => {
 	const [name, setName] = useState("Moon")
 	const [component, setComponent] = useState([])
@@ -18,7 +19,7 @@ const Destination = () => {
 				{component.map((item, idx) => (
 					<Fragment key={idx}>
 						<div className='left-portion'>
-							<img src={item.images} alt='not found' />
+							<Image src={item.images} />
 						</div>
 						<div className='right-portion'>
 							<nav className='dest-nav'>

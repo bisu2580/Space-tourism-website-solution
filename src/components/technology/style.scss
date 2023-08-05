@@ -33,7 +33,7 @@
 			letter-spacing: 2.78px;
 			text-align: center;
 			margin-left: auto;
-			top: 8.125rem;
+			top: 5.125rem;
 			left: 0;
 		}
 		@include tablet {
@@ -264,7 +264,7 @@
 				left: 8.125rem;
 				margin-right: -1.875rem;
 			}
-			img {
+			.image-tech {
 				@include mobile {
 					object-fit: cover;
 					height: 13.25rem;

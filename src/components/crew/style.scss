@@ -95,11 +95,12 @@
 				max-width: 458px;
 				text-align: center;
 				justify-content: center;
-				top: 250px;
+				top: 200px;
 			}
 			@include medium-screen {
 				max-width: 600px;
 				text-align: start;
+				top: 250px;
 				left: 100px;
 			}
 			@include large-screen {
@@ -229,7 +230,6 @@
 				right: 0;
 				top: 120px;
 				width: 327px;
-				// width: 100vw;
 				height: 223px;
 				padding: 10px;
 			}

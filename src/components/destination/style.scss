@@ -32,7 +32,7 @@
 		@include mobile {
 			font-size: 1rem;
 			letter-spacing: 2.72px;
-			top: 8rem;
+			top: 7rem;
 			left: auto;
 		}
 		@include tablet {
@@ -109,6 +109,9 @@
 			}
 			img {
 				@include mobile {
+					width: 17.75rem;
+				}
+				@include tablet {
 					width: 18.75rem;
 				}
 				@include medium-screen {

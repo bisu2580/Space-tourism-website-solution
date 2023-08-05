@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react"
 import "./style.scss"
 import { crew } from "../../crew-data"
+import Image from "../LazyLoadImage"
 const Crew = () => {
 	const [active, setActive] = useState(0)
 	return (
@@ -34,7 +35,7 @@ const Crew = () => {
 								className={active === idx ? "crew-right" : "crew-right hidden"}
 							>
 								<div className='image'>
-									<img src={item.images} alt='' />
+									<Image src={item.images} />
 								</div>
 							</div>
 						</Fragment>
